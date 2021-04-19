@@ -1,0 +1,498 @@
+@mainColor: #EC9F31;
+@mainBackGroundColor:#fefef4;
+@topStickerHeight:80px;
+@buyCartBackGroundColor: #f5f5f5;
+@topStickerColor:#21100d;
+@buttonColor:#EC9F31;
+
+
+@import "pizza/pizza-card";
+@import "order";
+*{
+  background-color: @mainBackGroundColor;
+
+}
+.buyCart{
+  background-color: @buyCartBackGroundColor;
+  position: fixed;
+  height: 100%;
+  display: inline-block;
+  top: 0;
+  right: 0;
+
+
+
+
+  .headerOfBuyCart{
+    height: @topStickerHeight;
+    position: fixed;
+    background-color:white;
+    width: inherit;
+    right: 0;
+
+    h4{
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 9%;
+      margin-left: 4%;
+    }
+    .howManyOrders{
+      background-color:@buttonColor;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      border: none;
+      display: inline-block;
+      position: fixed;
+      color: white;
+      text-align: center;
+      margin-top: 2%;
+    }
+
+    .clearOrders{
+      font-size: small;
+      color: grey;
+      float: right;
+      display: inline-block;
+      margin-top: 9%;
+    }
+  }
+
+  .orders{
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    width: inherit;
+    top:@topStickerHeight;
+
+    background-color: @buyCartBackGroundColor;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .order{
+      padding-left: 5%;
+      height: 20%;
+      position: relative;
+      right: 0;
+      background-color: @buyCartBackGroundColor;
+      border: 0;
+      .pizzaImg{
+        height: 80%;
+        width: 30%;
+        padding-right: 0;
+        position: absolute;
+        top: 10%;
+        right: -15%;
+        display: inline-block;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .pizzaName{
+        color: @buttonColor;
+        background-color: @buyCartBackGroundColor;
+        display: inline-block;
+      }
+      .priceForOneOrder{
+        display: inline-block;
+        color: black;
+        background-color: @buyCartBackGroundColor;
+        font-weight: bold;
+      }
+      .controlButtons{
+        display: inline-block;
+        padding-left: 4%;
+        background-color: @buyCartBackGroundColor;
+      }
+      .minus{
+        display: inline-block;
+        color: white;
+        background-color: red;
+        text-align: center;
+        border: 0;
+        border-radius: 50%;
+      }
+      .counter{
+        display: inline-block;
+        font-weight: bold;
+        background-color: @buyCartBackGroundColor;
+      }
+      .plus{
+        display: inline-block;
+        color: white;
+        background-color: green;
+        text-align: center;
+        border: 0;
+        border-radius: 50%;
+      }
+      .delete{
+        display: inline-block;
+        color: white;
+        background-color: blue;
+        text-align: center;
+        border: 0;
+        border-radius: 50%;
+
+      }
+    }
+  }
+
+
+  .bottomOfBuyCart{
+    height: @topStickerHeight*1.5px;
+    position: fixed;
+    text-align: center;
+    width:inherit;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+
+    h5{
+      font-weight: bold;
+      display: inline-block;
+      padding-right: 20%;
+    }
+    .totalWorse{
+      display: inline-block;
+      font-weight: bold;
+      padding-bottom: 10%;
+    }
+
+    .orderButton{
+      display: block;
+      width: 70%;
+      height: 25%;
+      margin: auto;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+.thumbnail pizza-card{
+  background-color: white;
+}
+
+.menu{
+  background-color: #21100d;
+  opacity: 0.8;
+
+  height: @topStickerHeight;
+
+  position: fixed;
+  z-index: 1;
+  .menuPart1{
+    position: relative;
+    margin-left: 100px;
+
+    text-align: center;
+    height: 50%;
+    background-color: @topStickerColor;
+    border: 0;
+    border-bottom: 1px solid grey;
+    h4{
+      display: inline-block;
+      background-color: @topStickerColor;
+      padding-right: 5%;
+    }
+    h5{
+      display: inline-block;
+      background-color: @topStickerColor;
+      padding-right: 5%;
+    }
+    h6{
+      display: inline-block;
+      background-color: @topStickerColor;
+      padding-right: 5%;
+    }
+
+    .enterButton{
+      float: right;
+      margin-right: 3%;
+
+    }
+  }
+  .menuPart2{
+    position: relative;
+    margin-left: 100px;
+
+    height: 50%;
+    background-color: @topStickerColor;
+    span{
+      background-color: @topStickerColor;
+      color: white;
+    }
+  }
+
+}
+
+.badge-top{
+  position: fixed;
+  top: 0;
+  left: 10px;
+  width: 100px;
+  height: @topStickerHeight;
+
+  z-index: 2;
+  .discount{
+    transform: rotate(180deg);
+    position: fixed;
+    left: 10px;
+    top: @topStickerHeight;
+    width: 100px;
+  }
+  background-color: @buttonColor;
+  .text-1{
+    color: white;
+    font-size: 2em;
+    background-color: @buttonColor;
+    text-align: center;
+  }
+  .text-2{
+    color: white;
+    text-align: center;
+    font-size: large;
+    background-color: @buttonColor;
+  }
+}
+
+
+
+
+.badge-bottom{
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  width: 100px;
+  height: @topStickerHeight;
+  z-index: 1;
+  .discount{
+    position: fixed;
+    left: 10px;
+    bottom: @topStickerHeight;
+    width: 100px;
+
+  }
+  background-color: @buttonColor;
+  .text-1{
+    color: white;
+    background-color: @buttonColor;
+    text-align: center;
+    border-bottom: dashed white 2px;
+  }
+  .text-2{
+    color: white;
+    text-align: center;
+    background-color: @buttonColor;
+  }
+}
+
+
+
+.allPizza{
+  display: inline-block;
+  margin-left: 15%;
+  margin-top: @topStickerHeight/2;
+  width: 40%;
+  max-width: 50%;
+  min-width: 20%;
+  background-color: white;
+  h3{
+    margin-left: 40%;
+    display: inline-block;
+    font-weight: bold;
+  }
+  .howManyPizza{
+    background-color:@buttonColor;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    margin-top: @topStickerHeight/2;
+  }
+
+  nav{
+    background-color: white;
+    display: inline-block;
+    margin-left: 0;
+  }
+
+  li{
+    background-color: white;
+    display: inline-block;
+    padding-left: 5px;
+  }
+
+  a{
+    color: @buttonColor;
+  }
+
+
+  a .all{
+    background-color: white;
+    background-color: @buttonColor;
+    color: white;
+  }
+
+}
+
+.generalButtonDesign{
+  background-color:@buttonColor;
+  text-align: center;
+  color: white;
+  border: 0;
+  display: inline-block;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+
+.footer{
+  background-color: @buyCartBackGroundColor;
+  height: 15%;
+  text-align: center;
+
+}
+
+
+
+
+
+
+
+//@animationDuration: 0.4s;
+//@colorBadge1: #484848;
+//@colorMain: #ea862e;
+//@colorBorder: #da782d;
+//.badge-top {
+//  position: fixed;
+//  top: 0;
+//  left: 10px;
+//
+//  transition: all @animationDuration ease;
+//  transform: translateY(-30px);
+//  .badge-geometry {
+//    transition: all @animationDuration ease;
+//    border-top: 120px solid @colorMain;
+//    border-bottom: 10px solid transparent;
+//  }
+//  .badge-text {
+//    transition: all @animationDuration ease;
+//    margin: 50px 10px;
+//    background-color: blue;
+//
+//    top: 0;
+//  }
+//}
+//
+//.badge-top:hover {
+//  transform: translateY(0px);
+//  .badge-geometry {
+//    border-color: @colorBadge1 @colorBadge1 transparent @colorBadge1;
+//  }
+//  .badge-text {
+//    color: @colorMain;
+//    transform: scale(1.3) translateY(-15px);
+//  }
+//}
+//
+//.badge-bottom {
+//  position: fixed;
+//  bottom: 0;
+//  left: 10px;
+//
+//  transition: all @animationDuration ease;
+//  transform: translateY(30px);
+//
+//  .hide-badge {
+//    transition: all @animationDuration ease;
+//    position: fixed;
+//    top: 7px;
+//    right: 5px;
+//    color: white;
+//  }
+//  .badge-geometry {
+//    transition: all @animationDuration ease;
+//    border-top: 10px solid transparent;
+//    border-bottom: 145px solid @colorMain;
+//  }
+//  .badge-text {
+//    transition: all @animationDuration ease;
+//    margin: 35px 5px;
+//    bottom: 0;
+//
+//    .text-1 {
+//      display: inline-block;
+//      transition: all @animationDuration ease;
+//      font-size: 16px;
+//      font-weight: 600;
+//      margin-bottom: 0;
+//
+//    }
+//
+//    .text-2 {
+//      display: inline-block;
+//      transition: all @animationDuration ease;
+//      font-size: 18px;
+//    }
+//  }
+//  .dotted-line {
+//    transition: all @animationDuration ease;
+//    border-bottom: 3px dotted darken(@colorBorder, 10%);
+//    margin: 0 7px 7px 7px;
+//  }
+//}
+//
+//.badge-bottom:hover {
+//  transform: translateY(0px);
+//
+//  .hide-badge {
+//    color: @colorMain;
+//    transform: translate(-2px, 5px) scale(1.3);
+//  }
+//  .badge-geometry {
+//    border-color: transparent @colorBadge1 @colorBadge1 @colorBadge1;
+//  }
+//  .text-1 {
+//    color: @colorMain;
+//    transform: scale(0.9) translateY(5px);
+//  }
+//  .text-2 {
+//    color: @colorMain;
+//    transform: scale(2) translateY(10px);
+//  }
+//  .dotted-line {
+//    transform: translateY(10px);
+//  }
+//}
+//
+//.badge-geometry {
+//  border-left: 53px solid @colorMain;
+//  border-right: 53px solid @colorMain;
+//  box-shadow: #1e1e1e;
+//}
+//
+//.badge-text {
+//  position: fixed;
+//  color: white;
+//  font-weight: 500;
+//  text-align: center;
+//
+//  .text-1 {
+//    font-size: 20px;
+//    margin-bottom: 0px;
+//    padding: 0 15px;
+//  }
+//  .text-2 {
+//    font-size: 26px;
+//  }
+//}
+//

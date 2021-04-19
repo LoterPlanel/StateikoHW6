@@ -1,0 +1,30 @@
+<% include common/header.ejs %>
+
+<div class="allPizza">
+
+    <h3>Усі піцци</h3>
+    <div class="howManyPizza">8</div>
+    <nav>
+        <ul class="navigation">
+            <li class="all"><a href="#">Усі</a></li>
+            <li class="meat"><a href="#">М'ясні</a></li>
+            <li class="pineapple"><a href="#">З ананасами</a></li>
+            <li class="mushrooms"><a href="#">З грибами</a></li>
+            <li class="seafood"><a href="#">З морепродуктами</a></li>
+            <li class="vega"><a href="#">Вега</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+
+
+<div class="container">
+    <div class="row" >
+
+        <div class="col-xs-6 col-sm-6 col-md-8 col-lg-9" id="pizza_list"></div>
+
+    </div>
+</div>
+<%include common/buycart.ejs%>
+<% include common/footer.ejs %>

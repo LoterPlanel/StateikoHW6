@@ -1,0 +1,26 @@
+<div class="order">
+    <h4 class="pizzaName"><%= pizza.title %> (<%if (size.toString().localeCompare("small_size")==0){%>
+        Мала)</h4>
+    <br>
+    <img src="assets/images/size-icon.svg"><%=pizza.small_size.size%>
+    <img src="assets/images/weight.svg"><%=pizza.small_size.weight%>
+    <br>
+    <%} else {%>
+    Велика)</h4>
+    <br>
+    <img src="assets/images/size-icon.svg"><%=pizza.big_size.size%>
+    <img src="assets/images/weight.svg"><%=pizza.big_size.weight%>
+    <br>
+    <%}%>
+    <h6 class="priceForOneOrder"><%=totalPrice%> грн</h6>
+    <div class="controlButtons">
+        <button class="minus">-</button>
+        <div class="counter"><%=quantity%></div>
+        <button class="plus">+</button>
+        <button class="delete">X</button>
+    </div>
+    <div class="pizzaImg">
+        <img src="<%= pizza.icon %>" alt="Pizza">
+    </div>
+
+</div>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+
+</head>
+<body>
+
+
+
+<div class="badge-top">
+    <div class="badge-text">
+        <div class="text-1">PIZZA</div>
+        <div class="text-2">KMA</div>
+    </div>
+    <img class="discount" src="assets/images/discount.svg">
+</div>
+
+
+
+
+<div class="menu col-xs-6 col-sm-6 col-md-8 col-lg-9">
+
+    <div class="menuPart1">
+        <h4 class="hidden-xs">(044)222 5 222</h4>
+        <h6 class="visible-xs-inline">(044)222 5 222</h6>
+        <h6 class="visible-lg-inline visible-md-inline">24 години / 7 днів на тиждень</h6>
+        <h5 class="visible-lg-inline">Безкоштовна доставка піцци</h5>
+        <button class="btn-default generalButtonDesign enterButton hidden-xs">Ввійти</button>
+
+    </div>
+
+
+    <div class="menuPart2">
+        <span class="hidden-xs">Піцца</span>
+        <button class="btn-default generalButtonDesign enterButton visible-xs-inline">Ввійти</button>
+    </div>
+</div>
+
+
+
+<div class="allPizza">
+
+    <h3>Усі піцци</h3>
+    <div class="howManyPizza">8</div>
+    <nav>
+        <ul class="navigation">
+            <li class="all"><a href="#">Усі</a></li>
+            <li class="meat"><a href="#">М'ясні</a></li>
+            <li class="pineapple"><a href="#">З ананасами</a></li>
+            <li class="mushrooms"><a href="#">З грибами</a></li>
+            <li class="seafood"><a href="#">З морепродуктами</a></li>
+            <li class="vega"><a href="#">Вега</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+
+
+<div class="container">
+    <div class="row" >
+
+      <div class="col-xs-6 col-sm-6 col-md-8 col-lg-9" id="pizza_list"></div>
+        <div class= "col-xs-6 col-sm-6 col-md-4 col-lg-3 buyCart">
+            <div class="headerOfBuyCart">
+                <h4>Замовлення</h4>
+                <div class="howManyOrders">0</div>
+                <a href="#" class="clearOrders">Очистити замовлення</a>
+            </div>
+            <div class="orders" id="cart">
+
+            </div>
+            <div class="bottomOfBuyCart">
+                <h5>Сумма замовлення</h5>
+                <div class="totalWorse">0</div>
+                <button class="generalButtonDesign orderButton">Замовити</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="badge-bottom">
+    <div class="badge-text">
+        <div class="text-1">Цього тижня на все</div>
+        <div class="text-2">-20%</div>
+    </div>
+    <img class="discount" src="assets/images/discount.svg">
+</div>
+<div class="col-xs-6 col-sm-6 col-md-8 col-lg-9">
+<div class="footer">
+Pizza.22 - практичний проект в межах курсу  Києво-Могилянської академії
+<br>
+Доставка піцци не здійснюється
+</div>
+</div>
+
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<script type="text/javascript"  src="assets/js/main.js"> </script>
+</body>
+</html>
